@@ -6,7 +6,12 @@
 
 ===== Buổi 2 ======
 * Install BS4
-* Rendering Elements
-* Handling Events
+* Rendering Elements: {}
+* Handling Events: onClick={}
 * State: Nếu như state thay đổi => component render lại 
 * List keys
+
+===== Buổi 3 ======
+* Communication
+    - Props: Truyền dữ liệu từ component cha => con
+    - Lifting State Up: Truyền dữ liệu từ component con => cha

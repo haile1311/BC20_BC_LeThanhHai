@@ -6,6 +6,9 @@ import HandlingEvent from "./handling-events";
 import State from "./state";
 import ChangeColorCar from "./changeColorCar";
 import ListKeys from "./list-keys";
+import Example from "./list-keys/example";
+import Communication from "./communication";
+import LiftingStateUpCart from "./shopping-cart";
 
 function App() {
   return (
@@ -21,6 +24,51 @@ function App() {
       <ChangeColorCar />
       <hr />
       <ListKeys />
+      <hr />
+      <Example />
+      <hr />
+      <Communication />
+      <hr />
+      <LiftingStateUpCart />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
