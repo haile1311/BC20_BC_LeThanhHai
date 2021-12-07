@@ -5,7 +5,14 @@ export default class DanhSachSanPham extends Component {
   renderListProduct = () => {
     const { listProduct } = this.props;
     return listProduct.map((product) => {
-      return <SanPham key={product.maSP} product={product} />;
+      return (
+        <SanPham
+          key={product.maSP}
+          product={product}
+          detailProduct={this.props.detailProduct}
+          addCart={this.props.addCart}
+        />
+      );
     });
   };
 

@@ -9,6 +9,7 @@ import ListKeys from "./list-keys";
 import Example from "./list-keys/example";
 import Communication from "./communication";
 import LiftingStateUpCart from "./shopping-cart";
+import Usermanagment from "./user-management";
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
       <Communication />
       <hr />
       <LiftingStateUpCart />
+      <hr />
+      <Usermanagment />
       <br />
       <br />
       <br />

@@ -15,3 +15,7 @@
 * Communication
     - Props: Truyền dữ liệu từ component cha => con
     - Lifting State Up: Truyền dữ liệu từ component con => cha
+
+===== Buổi 4 ======
+* Shopping cart
+* Usermanagement
