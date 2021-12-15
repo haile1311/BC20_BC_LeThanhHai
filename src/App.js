@@ -9,7 +9,8 @@ import ListKeys from "./list-keys";
 import Example from "./list-keys/example";
 import Communication from "./communication";
 import LiftingStateUpCart from "./shopping-cart";
-import Usermanagment from "./user-management";
+// import Usermanagment from "./user-management";
+import UsermanagementRedux from "./user-management-redux";
 
 function App() {
   return (
@@ -32,7 +33,9 @@ function App() {
       <hr />
       <LiftingStateUpCart />
       <hr />
-      <Usermanagment />
+      {/* <Usermanagment /> */}
+
+      <UsermanagementRedux />
       <br />
       <br />
       <br />

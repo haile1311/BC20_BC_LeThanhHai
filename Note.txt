@@ -22,3 +22,7 @@
 ===== Buổi 5 ======
 * Usermanagement
 * Form
+
+===== Buổi 6 ======
+* Usermanagement
+* Redux

@@ -68,14 +68,14 @@ class Home extends Component {
   };
 
   render() {
-    let { userList, keyword } = this.state;
-    userList = this.state.userList.filter((user) => {
-      return user.fullname.toLowerCase().indexOf(keyword.toLowerCase()) !== -1;
-    });
+    // let { userList, keyword } = this.state;
+    // userList = this.state.userList.filter((user) => {
+    //   return user.fullname.toLowerCase().indexOf(keyword.toLowerCase()) !== -1;
+    // });
 
     return (
       <div className="container">
-        <h1 className="display-4 text-center my-3">User Management</h1>
+        <h1 className="display-4 text-center my-3">User Management Redux</h1>
         <div className="d-flex justify-content-between align-items-center">
           <Search getKeyword={this.handleGetKeyword} />
           <button
@@ -92,7 +92,7 @@ class Home extends Component {
           </button>
         </div>
         <Users
-          userList={userList}
+          // userList={userList}
           getUserDelete={this.handleDeleteUser}
           getUserEdit={this.handleUserEdit}
         />
