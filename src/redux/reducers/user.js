@@ -1,3 +1,5 @@
+import { DELETE_USER } from "./../contants";
+
 let initialState = {
   userList: [
     {
@@ -21,8 +23,55 @@ let initialState = {
   userEdit: null,
 };
 
-const userReducer = (state = initialState) => {
-  return { ...state };
+const userReducer = (state = initialState, action) => {
+  console.log(action);
+  switch (action.type) {
+    case DELETE_USER: {
+      let userList = [...state.userList];
+      const index = state.userList.findIndex(
+        (user) => user.id === action.payload.id
+      );
+      if (index !== -1) {
+        userList.splice(index, 1);
+        //cập nhật lại state <=> tương đương hàm setState trong component
+        state.userList = userList;
+      }
+      return { ...state };
+    }
+
+    case "SUBMIT_USER": {
+      let userList = [...state.userList];
+      if (action.payload.id) {
+        //UPDATE
+        const index = userList.findIndex(
+          (user) => user.id === action.payload.id
+        );
+        if (index !== -1) {
+          userList[index] = action.payload;
+        }
+      } else {
+        //ADD
+        const userNew = { ...action.payload, id: new Date().getTime() };
+        userList.push(userNew);
+      }
+
+      state.userList = userList;
+      return { ...state };
+    }
+
+    case "EDIT_USER": {
+      state.userEdit = action.payload;
+      return { ...state };
+    }
+
+    case "GET_KEYWORD": {
+      state.keyword = action.payload;
+      return { ...state };
+    }
+
+    default:
+      return { ...state };
+  }
 };
 
 export default userReducer;

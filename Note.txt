@@ -26,3 +26,6 @@
 ===== Buổi 6 ======
 * Usermanagement
 * Redux
+
+===== Buổi 7 ======
+* Redux

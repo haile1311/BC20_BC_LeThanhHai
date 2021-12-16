@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 class Modal extends Component {
   constructor(props) {
@@ -25,7 +26,8 @@ class Modal extends Component {
   handleSubmit = (event) => {
     //ngăn chặn việc load trang
     event.preventDefault();
-    this.props.getUserSubmit(this.state);
+
+    this.props.onSubmit(this.state);
 
     this.closeModal.current.click();
   };
@@ -146,4 +148,22 @@ class Modal extends Component {
   }
 }
 
-export default Modal;
+const mapStateToProps = (state) => {
+  return {
+    userEdit: state.userReducer.userEdit,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onSubmit: (user) => {
+      const action = {
+        type: "SUBMIT_USER",
+        payload: user,
+      };
+      dispatch(action);
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);
