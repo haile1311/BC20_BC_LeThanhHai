@@ -11,6 +11,8 @@ import Communication from "./communication";
 import LiftingStateUpCart from "./shopping-cart";
 // import Usermanagment from "./user-management";
 import UsermanagementRedux from "./user-management-redux";
+import FormValidation from "./form-validation";
+import LifeCycle from "./lifecycle";
 
 function App() {
   return (
@@ -36,6 +38,10 @@ function App() {
       {/* <Usermanagment /> */}
 
       <UsermanagementRedux />
+      <hr />
+      <FormValidation />
+      <hr />
+      <LifeCycle />
       <br />
       <br />
       <br />

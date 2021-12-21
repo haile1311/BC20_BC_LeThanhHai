@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { actGetKeyword } from "./../redux/actions";
 
 class Search extends Component {
   handleOnchange = (event) => {
@@ -21,11 +22,7 @@ class Search extends Component {
 const mapDispatchToProps = (dispatch) => {
   return {
     keyword: (key) => {
-      const action = {
-        type: "GET_KEYWORD",
-        payload: key,
-      };
-      dispatch(action);
+      dispatch(actGetKeyword(key));
     },
   };
 };

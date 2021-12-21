@@ -29,3 +29,8 @@
 
 ===== Buổi 7 ======
 * Redux
+
+===== Buổi 8 ======
+* Form Validation
+* Lifecycle
+

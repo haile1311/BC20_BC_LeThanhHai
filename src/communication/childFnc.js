@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function ChildFnc(props) {
-  console.log(props);
   const { username, age } = props;
   return (
     <div>

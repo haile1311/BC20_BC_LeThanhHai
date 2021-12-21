@@ -1,4 +1,5 @@
-import { DELETE_USER } from "./../contants";
+// import { DELETE_USER } from "./../contants";
+import * as ActionType from "./../contants";
 
 let initialState = {
   userList: [
@@ -24,9 +25,8 @@ let initialState = {
 };
 
 const userReducer = (state = initialState, action) => {
-  console.log(action);
   switch (action.type) {
-    case DELETE_USER: {
+    case ActionType.DELETE_USER: {
       let userList = [...state.userList];
       const index = state.userList.findIndex(
         (user) => user.id === action.payload.id
@@ -39,7 +39,7 @@ const userReducer = (state = initialState, action) => {
       return { ...state };
     }
 
-    case "SUBMIT_USER": {
+    case ActionType.SUBMIT_USER: {
       let userList = [...state.userList];
       if (action.payload.id) {
         //UPDATE
@@ -59,12 +59,12 @@ const userReducer = (state = initialState, action) => {
       return { ...state };
     }
 
-    case "EDIT_USER": {
+    case ActionType.EDIT_USER: {
       state.userEdit = action.payload;
       return { ...state };
     }
 
-    case "GET_KEYWORD": {
+    case ActionType.GET_KEYWORD: {
       state.keyword = action.payload;
       return { ...state };
     }
