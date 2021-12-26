@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PureChild from "./pure-child";
 
 export default class LifeCycle extends Component {
   constructor(props) {
@@ -28,6 +29,15 @@ export default class LifeCycle extends Component {
     console.log("componentDidUpdate");
   }
 
+  shouldComponentUpdate(nextProps,nextState){
+    console.log("shouldComponentUpdate", nextProps,nextState);
+    if(nextState.number === 2){
+      return false
+    }
+
+    return true;
+  }
+
   render() {
     console.log("render");
     return (
@@ -44,6 +54,8 @@ export default class LifeCycle extends Component {
         >
           Click
         </button>
+        <hr />
+        <PureChild />
       </div>
     );
   }

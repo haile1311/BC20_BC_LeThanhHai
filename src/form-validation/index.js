@@ -67,9 +67,7 @@ export default class FormValidation extends Component {
         emailValid,
         formValid: manvValid && tennvValid && emailValid,
       },
-      () => {
-        // this.handleFormValid();
-      }
+
     );
   };
 
