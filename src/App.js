@@ -1,5 +1,6 @@
 import "./App.css";
-import BtDatVe from "./BtDatVePhim/BtDatVe";
+import BaiTapBC from "./BaiTapBauCua/BaiTapBC";
+// import BtDatVe from "./BtDatVePhim/BtDatVe";
 // import Baitap1 from "./baitap1";
 // import Baitap2 from "./baitap2";
 // import RenderingElements from "./rendering-elements";
@@ -14,7 +15,7 @@ import BtDatVe from "./BtDatVePhim/BtDatVe";
 // import UsermanagementRedux from "./user-management-redux";
 // import FormValidation from "./form-validation";
 // import LifeCycle from "./lifecycle";
-import Oantuxi from "./BtOanTuXi/oantuxi";
+// import Oantuxi from "./BtOanTuXi/oantuxi";
 
 function App() {
   return (
@@ -49,7 +50,8 @@ function App() {
       {/* <Oantuxi /> */}
       {/* <br />
       <br /> */}
-      <BtDatVe />
+      {/* <BtDatVe /> */}
+      <BaiTapBC />
     </div>
   );
 }
