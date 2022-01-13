@@ -29,11 +29,11 @@ export default function QuanCuoc(props) {
             <img src={quanCuoc.hinhAnh} style={{ width: 250 }}></img>
 
             <div className='bg-success mt-2 pb-2 text-center' style={{ borderRadius: '10px', width: 250 }}>
-                <animated.button style={{ transform: propsUseSpringInCrease.scale.interpolate(scale => `scale(${scale})`) }} onClick={() => {
+                <animated.button style={{ fontSize: 25, transform: propsUseSpringInCrease.scale.interpolate(scale => `scale(${scale})`)  }} onClick={() => {
 
 
                     setInCrease({ scale: 1 })
-                    setInCrease({ scale: 1.25 })
+                    setInCrease({ scale: 2 })
 
                     dispatch({
                         type: 'DAT_CUOC_BAU_CUA',
@@ -41,22 +41,22 @@ export default function QuanCuoc(props) {
                         tangGiam: true,
                     })
                 }}
-                    className='btn btn-danger mr-3 mt-2' style={{ fontSize: 25 }}>+</animated.button>
+                    className='btn btn-danger mr-3 mt-2' key={Date.now()}>+</animated.button>
 
 
                 <span className='mt-2' style={{ color: 'yellow', fontSize: 25 }}>{quanCuoc.diemCuoc}</span>
 
-                <animated.button style={{ transform: propsUseSpringDeCrease.scale.interpolate(scale => `scale(${scale})`) }} onClick={() => {
+                <animated.button  style={{  fontSize: 25, transform: propsUseSpringDeCrease.scale.interpolate(scale => `scale(${scale})`)}} onClick={() => {
 
                     setDeCrease({ scale: 1 })
-                    setDeCrease({ scale: 1.25 })
+                    setDeCrease({ scale: 2 })
 
                     dispatch({
                         type: 'DAT_CUOC_BAU_CUA',
                         quanCuoc,
                         tangGiam: false,
                     })
-                }} className='btn btn-danger ml-3 mt-2' style={{ fontSize: 25 }}>-</animated.button>
+                }} className='btn btn-danger ml-3 mt-2'>-</animated.button>
             </div>
         </div>
     )

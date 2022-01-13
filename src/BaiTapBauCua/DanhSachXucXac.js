@@ -12,18 +12,18 @@ export default function DanhSachXucXac(props) {
             <div className='bg-white' style={{ width: 300, height: 300, borderRadius: 150, paddingLeft: 10 }}>
                 <div className='row'>
                     <div className='col-12 text-center' style={{ marginLeft: 75 }}>
-                        <XucXac xucXacItem={mangXucXac[0]} />
+                        <XucXac key={Date.now()} xucXacItem={mangXucXac[0]} />
                     </div>
                 </div>
 
 
                 <div className='row' style={{ marginTop: -20 }}>
                     <div className='col-4 text-right'>
-                        <XucXac xucXacItem={mangXucXac[1]} />
+                        <XucXac key={Date.now()} xucXacItem={mangXucXac[1]} />
                     </div>
 
                     <div className='col-6 text-right'>
-                        <XucXac xucXacItem={mangXucXac[2]} />
+                        <XucXac key={Date.now()} xucXacItem={mangXucXac[2]} />
                     </div>
 
                 </div>
